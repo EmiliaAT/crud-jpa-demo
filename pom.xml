@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.csc340</groupId>
     <artifactId>crud-jpa-demo</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.3-SNAPSHOT</version>
     <name>crud-jpa-demo</name>
     <description>Demo project for Spring Boot with JPA</description>
     <url/>
@@ -50,6 +50,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
         </dependency>
     </dependencies>
 
