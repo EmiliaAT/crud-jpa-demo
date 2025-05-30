@@ -9,4 +9,5 @@ public class CrudJpaDemoApplication {
     public static void main(String[] args) {
         SpringApplication.run(CrudJpaDemoApplication.class, args);
     }
+    
 }
