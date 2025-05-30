@@ -17,19 +17,31 @@ public class Fox {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Nonnull
     @Getter
     @Setter
+    @Nonnull
     private String name;
 
-    @Nonnull
     @Getter
     @Setter
+    @Nonnull
+    private String colour;
+
+    @Getter
+    @Setter
+    @Nonnull
+    private String species;
+
+    @Getter
+    @Setter
+    @Nonnull
     private String description;
 
-    public Fox(Long id, String name, String description) {
+    public Fox(Long id, String name, String description, String colour, String species) {
         this.id = id;
         this.name = name;
+        this.colour = colour;
+        this.species = species;
         this.description = description;
     }
 

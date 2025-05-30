@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class FoxController {
 
     @Autowired
-    private FoxService foxService;
+    private FoxService service;
 
 }
