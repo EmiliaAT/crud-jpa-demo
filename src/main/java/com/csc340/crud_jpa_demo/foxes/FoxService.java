@@ -5,7 +5,6 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
 
 @Service
 public class FoxService {
@@ -17,7 +16,7 @@ public class FoxService {
         return this.repository.findAll();
     }
 
-    public Optional<Fox> getFoxById(@PathVariable Long id) {
+    public Optional<Fox> getFoxById(Long id) {
         return this.repository.findById(id);
     }
 
@@ -35,6 +34,19 @@ public class FoxService {
 
     public List<Fox> getFoxesByDescription(String description) {
         return this.repository.getFoxesByDescription(description);
+    }
+
+    public Fox addFox(Fox fox) {
+        return this.repository.save(fox);
+    }
+
+    public Fox updateFox(Long id, Fox fox) {
+        Fox record = new Fox(id, fox.getName(), fox.getColour(), fox.getSpecies(), fox.getDescription());
+        return this.repository.save(record);
+    }
+
+    public void deleteFox(Long id) {
+        this.repository.deleteById(id);
     }
 
 }

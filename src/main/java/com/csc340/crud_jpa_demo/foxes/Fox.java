@@ -37,6 +37,10 @@ public class Fox {
     @Nonnull
     private String description;
 
+    public Fox() {
+
+    }
+
     public Fox(Long id, String name, String description, String colour, String species) {
         this.id = id;
         this.name = name;
